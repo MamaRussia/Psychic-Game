@@ -58,7 +58,7 @@ document.onkeyup = function (event) {
     //Sends the letter user guesses and decreases the guesses remaining
     if (userGuess !== computerGuess) {
       remain--;
-      guesses.push(userGuess);
+      guesses.push(" " + userGuess);
     }
 
     if ((wins === 2)) {

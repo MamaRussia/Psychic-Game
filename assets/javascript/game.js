@@ -61,20 +61,21 @@ document.onkeyup = function (event) {
       guesses.push(userGuess);
     }
 
-    if ((wins === 10)) {
-      wins -= 10;
+    if ((wins === 2)) {
+      wins -= 2;
       alert("Psychic say - You win! Cheat maybe?");
     }
     if ((remain === 0) && (losses === 9)) {
       remain += 9;
       losses -= 9
       guesses = [];
+      wins = 0;
       alert("Psychic say - You lose!");
     }
 
 
 
-    // Display the user and computer guesses, and wins/losses/ties.
+    // Display the user and computer guesses, and wins/losses/guesses left/letters chosen.
     userChoiceText.textContent = "You chose: " + userGuess;
     computerChoiceText.textContent = "The psychic chose: " + computerGuess;
     winsText.textContent = "Wins: " + wins;
